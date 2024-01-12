@@ -13,6 +13,9 @@
 		5D262B342B50EC400019BCD9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D262B332B50EC400019BCD9 /* Preview Assets.xcassets */; };
 		5D262B362B50EC400019BCD9 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D262B352B50EC400019BCD9 /* Persistence.swift */; };
 		5D262B392B50EC400019BCD9 /* Devote.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 5D262B372B50EC400019BCD9 /* Devote.xcdatamodeld */; };
+		5D262B422B50EDC60019BCD9 /* sound-rise.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5D262B3F2B50EDC60019BCD9 /* sound-rise.mp3 */; };
+		5D262B432B50EDC60019BCD9 /* sound-ding.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5D262B402B50EDC60019BCD9 /* sound-ding.mp3 */; };
+		5D262B442B50EDC60019BCD9 /* sound-tap.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5D262B412B50EDC60019BCD9 /* sound-tap.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +26,9 @@
 		5D262B332B50EC400019BCD9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		5D262B352B50EC400019BCD9 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
 		5D262B382B50EC400019BCD9 /* Devote.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Devote.xcdatamodel; sourceTree = "<group>"; };
+		5D262B3F2B50EDC60019BCD9 /* sound-rise.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-rise.mp3"; sourceTree = "<group>"; };
+		5D262B402B50EDC60019BCD9 /* sound-ding.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-ding.mp3"; sourceTree = "<group>"; };
+		5D262B412B50EDC60019BCD9 /* sound-tap.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-tap.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +61,7 @@
 		5D262B2B2B50EC3F0019BCD9 /* Devote */ = {
 			isa = PBXGroup;
 			children = (
+				5D262B452B50EDDE0019BCD9 /* Sound */,
 				5D262B2C2B50EC3F0019BCD9 /* DevoteApp.swift */,
 				5D262B2E2B50EC3F0019BCD9 /* ContentView.swift */,
 				5D262B302B50EC400019BCD9 /* Assets.xcassets */,
@@ -71,6 +78,16 @@
 				5D262B332B50EC400019BCD9 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		5D262B452B50EDDE0019BCD9 /* Sound */ = {
+			isa = PBXGroup;
+			children = (
+				5D262B402B50EDC60019BCD9 /* sound-ding.mp3 */,
+				5D262B3F2B50EDC60019BCD9 /* sound-rise.mp3 */,
+				5D262B412B50EDC60019BCD9 /* sound-tap.mp3 */,
+			);
+			path = Sound;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -131,7 +148,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D262B432B50EDC60019BCD9 /* sound-ding.mp3 in Resources */,
+				5D262B422B50EDC60019BCD9 /* sound-rise.mp3 in Resources */,
 				5D262B342B50EC400019BCD9 /* Preview Assets.xcassets in Resources */,
+				5D262B442B50EDC60019BCD9 /* sound-tap.mp3 in Resources */,
 				5D262B312B50EC400019BCD9 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
