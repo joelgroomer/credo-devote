@@ -110,13 +110,8 @@ struct ContentView: View {
             .navigationTitle("Daily Tasks")
             .navigationBarTitleDisplayMode(.large)
             .toolbar {
-                ToolbarItem(placement: .topBarLeading) {
-                    EditButton()
-                }
                 ToolbarItem(placement: .topBarTrailing) {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
+                    EditButton()
                 }
             } //: toolbar
             Text("Select an item")
