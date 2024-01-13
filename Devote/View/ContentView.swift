@@ -11,6 +11,10 @@ import CoreData
 struct ContentView: View {
     // MARK: - PROPERTIES
     @State private var task: String = ""
+    
+    private var isButtonDisabled: Bool {
+        task.isEmpty
+    }
 
     // MARK: - FETCHING DATA
     @Environment(\.managedObjectContext) private var viewContext
@@ -73,10 +77,11 @@ struct ContentView: View {
                         Text("SAVE")
                         Spacer()
                     }
+                    .disabled(isButtonDisabled)
                     .padding()
                     .font(.headline)
                     .foregroundStyle(.white)
-                    .background(Color.pink)
+                    .background(isButtonDisabled ? Color.gray : Color.pink)
                     .clipShape(.rect(cornerRadius: 10))
                 } //: New Task VStack
                 .padding()
