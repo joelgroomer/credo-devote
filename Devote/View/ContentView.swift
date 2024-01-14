@@ -11,10 +11,7 @@ import CoreData
 struct ContentView: View {
     // MARK: - PROPERTIES
     @State private var task: String = ""
-    
-    private var isButtonDisabled: Bool {
-        task.isEmpty
-    }
+    @State private var showNewTaskItem: Bool = false
 
     // MARK: - FETCHING DATA
     @Environment(\.managedObjectContext) private var viewContext
@@ -24,28 +21,7 @@ struct ContentView: View {
         animation: .default)
     private var items: FetchedResults<Item>
 
-    // MARK: - FUNCTIONS
-    private func addItem() {
-        withAnimation {
-            let newItem = Item(context: viewContext)
-            newItem.timestamp = Date()
-            newItem.task = task
-            newItem.completion = false
-            newItem.id = UUID()
-            
-            do {
-                try viewContext.save()
-            } catch {
-                
-                let nsError = error as NSError
-                fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
-            }
-            
-            task = ""
-            hideKeyboard()
-        }
-    }
-    
+    // MARK: - FUNCTIONS    
     private func deleteItems(offsets: IndexSet) {
         withAnimation {
             offsets.map { items[$0] }.forEach(viewContext.delete)
@@ -65,31 +41,30 @@ struct ContentView: View {
     var body: some View {
         NavigationStack {
             ZStack {
+                // MARK: MAIN VIEW
                 VStack {
-                    VStack(spacing: 16) {
-                        TextField("New Task", text: $task)
-                            .padding()
-                            .background(
-                                Color(UIColor.systemGray6)
-                            )
-                            .clipShape(.rect(cornerRadius: 10))
-                        
-                        Button {
-                            addItem()
-                        } label: {
-                            Spacer()
-                            Text("SAVE")
-                            Spacer()
-                        }
-                        .disabled(isButtonDisabled)
-                        .padding()
-                        .font(.headline)
-                        .foregroundStyle(.white)
-                        .background(isButtonDisabled ? Color.gray : Color.pink)
-                        .clipShape(.rect(cornerRadius: 10))
-                    } //: New Task VStack
-                    .padding()
+                    // MARK: HEADER
+                    Spacer(minLength: 80)
                     
+                    // MARK: NEW TASK BUTTON
+                    Button {
+                        showNewTaskItem = true
+                    } label: {
+                        Image(systemName: "plus.circle")
+                            .font(.system(size: 30, weight: .semibold, design: .rounded))
+                        Text("New Task")
+                            .font(.system(size: 24, weight: .bold, design: .rounded))
+                    }
+                    .foregroundStyle(.white)
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 15)
+                    .background(
+                        LinearGradient(gradient: Gradient(colors: [.pink, .blue]), startPoint: .leading, endPoint: .trailing)
+                            .clipShape(Capsule())
+                    )
+                    .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.25), radius: 8, x: 0.0, y: 4.0)
+                    
+                    // MARK: TASKS
                     List {
                         ForEach(items) { item in
                             NavigationLink {
@@ -114,6 +89,11 @@ struct ContentView: View {
                     .padding(.vertical, 0)
                     .frame(maxWidth: 640)
                 } //: VStack
+                
+                // MARK: NEW TASK ITEM
+                if showNewTaskItem {
+                    NewTaskItemView()
+                }
             } //: ZStack
             .navigationTitle("Daily Tasks")
             .navigationBarTitleDisplayMode(.large)
