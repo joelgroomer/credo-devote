@@ -11,6 +11,7 @@ struct NewTaskItemView: View {
     // MARK: - PROPERTIES
     @Environment(\.managedObjectContext) private var viewContext
     @State private var task: String = ""
+    @Binding var isShowing: Bool
     
     private var isButtonDisabled: Bool {
         task.isEmpty
@@ -35,6 +36,7 @@ struct NewTaskItemView: View {
             
             task = ""
             hideKeyboard()
+            isShowing = false
         }
     }
     
@@ -81,6 +83,6 @@ struct NewTaskItemView: View {
 
 // MARK: - PREVIEW
 #Preview {
-    NewTaskItemView()
+    NewTaskItemView(isShowing: .constant(true))
         .background(Color.gray.ignoresSafeArea(.all))
 }
