@@ -20,6 +20,7 @@
 		5D262B502B5258100019BCD9 /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D262B4F2B5258100019BCD9 /* HideKeyboardExtension.swift */; };
 		5D262B522B525E3F0019BCD9 /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D262B512B525E3E0019BCD9 /* BackgroundImageView.swift */; };
 		5D262B542B535EE50019BCD9 /* NewTaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D262B532B535EE50019BCD9 /* NewTaskItemView.swift */; };
+		5D262B562B5363BF0019BCD9 /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D262B552B5363BF0019BCD9 /* BlankView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		5D262B4F2B5258100019BCD9 /* HideKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardExtension.swift; sourceTree = "<group>"; };
 		5D262B512B525E3E0019BCD9 /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
 		5D262B532B535EE50019BCD9 /* NewTaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskItemView.swift; sourceTree = "<group>"; };
+		5D262B552B5363BF0019BCD9 /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +133,7 @@
 				5D262B2E2B50EC3F0019BCD9 /* ContentView.swift */,
 				5D262B512B525E3E0019BCD9 /* BackgroundImageView.swift */,
 				5D262B532B535EE50019BCD9 /* NewTaskItemView.swift */,
+				5D262B552B5363BF0019BCD9 /* BlankView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				5D262B522B525E3F0019BCD9 /* BackgroundImageView.swift in Sources */,
 				5D262B362B50EC400019BCD9 /* Persistence.swift in Sources */,
 				5D262B502B5258100019BCD9 /* HideKeyboardExtension.swift in Sources */,
+				5D262B562B5363BF0019BCD9 /* BlankView.swift in Sources */,
 				5D262B2F2B50EC3F0019BCD9 /* ContentView.swift in Sources */,
 				5D262B392B50EC400019BCD9 /* Devote.xcdatamodeld in Sources */,
 				5D262B2D2B50EC3F0019BCD9 /* DevoteApp.swift in Sources */,
