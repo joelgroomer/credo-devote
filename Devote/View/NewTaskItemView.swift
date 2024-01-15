@@ -59,6 +59,7 @@ struct NewTaskItemView: View {
                 Button {
                     addItem()
                     playSound(sound: "sound-ding", type: "mp3")
+                    feedback.notificationOccurred(.success)
                 } label: {
                     Spacer()
                     Text("SAVE")
@@ -69,6 +70,7 @@ struct NewTaskItemView: View {
                 .onTapGesture {
                     if isButtonDisabled {
                         playSound(sound: "sound-tap", type: "mp3")
+                        feedback.notificationOccurred(.warning)
                     }
                 }
                 .padding()
