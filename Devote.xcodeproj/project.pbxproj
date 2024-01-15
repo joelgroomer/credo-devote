@@ -21,6 +21,8 @@
 		5D262B522B525E3F0019BCD9 /* BackgroundImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D262B512B525E3E0019BCD9 /* BackgroundImageView.swift */; };
 		5D262B542B535EE50019BCD9 /* NewTaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D262B532B535EE50019BCD9 /* NewTaskItemView.swift */; };
 		5D262B562B5363BF0019BCD9 /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D262B552B5363BF0019BCD9 /* BlankView.swift */; };
+		5D3CFD412B54F35D0050C0B0 /* ListRowItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3CFD402B54F35D0050C0B0 /* ListRowItemView.swift */; };
+		5D3CFD432B54F5440050C0B0 /* CheckboxStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D3CFD422B54F5440050C0B0 /* CheckboxStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +42,8 @@
 		5D262B512B525E3E0019BCD9 /* BackgroundImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageView.swift; sourceTree = "<group>"; };
 		5D262B532B535EE50019BCD9 /* NewTaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskItemView.swift; sourceTree = "<group>"; };
 		5D262B552B5363BF0019BCD9 /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
+		5D3CFD402B54F35D0050C0B0 /* ListRowItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowItemView.swift; sourceTree = "<group>"; };
+		5D3CFD422B54F5440050C0B0 /* CheckboxStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckboxStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +111,7 @@
 		5D262B472B50EE1C0019BCD9 /* Style */ = {
 			isa = PBXGroup;
 			children = (
+				5D3CFD422B54F5440050C0B0 /* CheckboxStyle.swift */,
 			);
 			path = Style;
 			sourceTree = "<group>";
@@ -134,6 +139,7 @@
 				5D262B512B525E3E0019BCD9 /* BackgroundImageView.swift */,
 				5D262B532B535EE50019BCD9 /* NewTaskItemView.swift */,
 				5D262B552B5363BF0019BCD9 /* BlankView.swift */,
+				5D3CFD402B54F35D0050C0B0 /* ListRowItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -226,8 +232,10 @@
 				5D262B502B5258100019BCD9 /* HideKeyboardExtension.swift in Sources */,
 				5D262B562B5363BF0019BCD9 /* BlankView.swift in Sources */,
 				5D262B2F2B50EC3F0019BCD9 /* ContentView.swift in Sources */,
+				5D3CFD412B54F35D0050C0B0 /* ListRowItemView.swift in Sources */,
 				5D262B392B50EC400019BCD9 /* Devote.xcdatamodeld in Sources */,
 				5D262B2D2B50EC3F0019BCD9 /* DevoteApp.swift in Sources */,
+				5D3CFD432B54F5440050C0B0 /* CheckboxStyle.swift in Sources */,
 				5D262B542B535EE50019BCD9 /* NewTaskItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
