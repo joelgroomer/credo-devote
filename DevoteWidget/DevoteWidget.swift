@@ -112,6 +112,7 @@ struct DevoteWidget: Widget {
                     .background()
             }
         }
+        .contentMarginsDisabled()
         .configurationDisplayName("Devote Launcher")
         .description("This is an example widget for the personal task manager.")
     }
