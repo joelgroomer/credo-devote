@@ -31,6 +31,7 @@
 		5D3CFD562B56374D0050C0B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D3CFD552B56374D0050C0B0 /* Assets.xcassets */; };
 		5D3CFD5A2B56374D0050C0B0 /* DevoteWidgetExtension.appex in Embed Foundation Extensions */ = {isa = PBXBuildFile; fileRef = 5D3CFD4A2B56374B0050C0B0 /* DevoteWidgetExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		5D3CFD5F2B563AD60050C0B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5D262B302B50EC400019BCD9 /* Assets.xcassets */; };
+		5D3CFD602B563B8E0050C0B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D262B4D2B5252220019BCD9 /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -352,6 +353,7 @@
 			files = (
 				5D3CFD542B56374C0050C0B0 /* DevoteWidget.swift in Sources */,
 				5D3CFD522B56374C0050C0B0 /* DevoteWidgetBundle.swift in Sources */,
+				5D3CFD602B563B8E0050C0B0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -43,13 +43,48 @@ struct DevoteWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        VStack {
-            Text("Time:")
-            Text(entry.date, style: .time)
-
-            Text("Emoji:")
-            Text(entry.emoji)
-        }
+//        VStack {
+//            Text("Time:")
+//            Text(entry.date, style: .time)
+//
+//            Text("Emoji:")
+//            Text(entry.emoji)
+//        }
+        GeometryReader { geo in
+            ZStack {
+                backgroundGradient
+                
+                Image("rocket-small")
+                    .resizable()
+                    .scaledToFit()
+                
+                Image("logo")
+                    .resizable()
+                    .frame(width: 36, height: 36)
+                    .offset(
+                        x: (geo.size.width / 2) - 20,
+                        y: (geo.size.height / -2) + 20
+                    )
+                    .padding(.top, 12)
+                    .padding(.trailing, 12)
+                
+                HStack {
+                    Text("Just Do It")
+                        .foregroundStyle(.white)
+                        .font(.system(.footnote, design: .rounded))
+                        .fontWeight(.bold)
+                        .padding(.horizontal, 12)
+                        .padding(.vertical, 4)
+                        .background(
+                            Color.black.opacity(0.5)
+                                .blendMode(.overlay)
+                        )
+                    .clipShape(Capsule())
+                } //: HStack
+                .padding()
+                .offset(y: (geo.size.height / 2) - 24)
+            } //: ZStack
+        } //: GeometryReader
     }
 }
 
@@ -67,12 +102,26 @@ struct DevoteWidget: Widget {
                     .background()
             }
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Devote Launcher")
+        .description("This is an example widget for the personal task manager.")
     }
 }
 
 #Preview(as: .systemSmall) {
+    DevoteWidget()
+} timeline: {
+    SimpleEntry(date: .now, emoji: "😀")
+    SimpleEntry(date: .now, emoji: "🤩")
+}
+
+#Preview(as: .systemMedium) {
+    DevoteWidget()
+} timeline: {
+    SimpleEntry(date: .now, emoji: "😀")
+    SimpleEntry(date: .now, emoji: "🤩")
+}
+
+#Preview(as: .systemLarge) {
     DevoteWidget()
 } timeline: {
     SimpleEntry(date: .now, emoji: "😀")
